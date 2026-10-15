@@ -6,7 +6,7 @@ const app = express();
 const PORT = process.env.PORT || 3000;
 
 // Serve UI
-app.use(express.static('public'));
+app.use(express.static(path.join(__dirname, 'Public')));
 
 // Multer: simpan file di memori (bisa diubah ke disk untuk file sangat besar)
 const upload = multer({
